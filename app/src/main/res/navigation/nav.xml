@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/userListFragment">
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.simpleroomretroapp.ui.fragments.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/slide_out_up" />
+        <argument
+            android:name="user"
+            app:argType="com.example.simpleroomretroapp.models.UserData"
+            app:nullable="true" />
+        <argument
+            android:name="localUserUpdated"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.simpleroomretroapp.ui.fragments.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_userListFragment"
+            app:destination="@id/userListFragment"
+            app:enterAnim="@anim/slide_down_enter"
+            app:exitAnim="@anim/slide_down_exit" />
+        <argument
+            android:name="user"
+            app:argType="com.example.simpleroomretroapp.models.UserData" />
+        <action
+            android:id="@+id/action_userDetailsFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.example.simpleroomretroapp.ui.fragments.EditUserFragment"
+        android:label="fragment_edit_user"
+        tools:layout="@layout/fragment_edit_user" >
+        <action
+            android:id="@+id/action_editUserFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.simpleroomretroapp.models.UserData" />
+    </fragment>
+</navigation>

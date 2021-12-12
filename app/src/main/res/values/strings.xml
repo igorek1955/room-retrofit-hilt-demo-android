@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SimpleRoomRetroApp</string>
+    <string name="refresh_button">Refresh Button</string>
+    <string name="check_your_network_settings">Check your network settings</string>
+    <string name="no_data_to_display">No Data to Display</string>
+    <string name="id">id:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">email:</string>
+    <string name="first_name">First Name</string>
+    <string name="edit_user">Edit User</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_capital">Email</string>
+    <string name="avatar_path">Avatar Path</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+</resources>
